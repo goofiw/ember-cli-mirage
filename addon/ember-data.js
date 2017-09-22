@@ -40,6 +40,7 @@ export function getDsModels() {
     .forEach((path) => {
       let paths = path.split('/');
       let modelName = paths[paths.length - 1];
+      console.log('require', require)
       let model = require(path, null, null, true).default;
 
       if (modelName === 'model') {
